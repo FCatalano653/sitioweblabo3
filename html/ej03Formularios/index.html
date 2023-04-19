@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Formularios </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </head>
+    <body>
+        
+        <header>
+            <h1> Formulario para entrada sin validacion </h1>
+            <a href="../index.html"> Volver a indice de ejercicios html </a>
+        </header>
+
+        <hr>
+
+        <section>
+            <form action="./respuestaFormulario.html" target="_blank" method="get" data-tip="">
+                <ul>
+                    <li>
+                        <label style="font-weight:bold;" for="apellido"> Apellido: </label> 
+                        <br> 
+                        <input type="text" id="apellido" name="apellido" value="" autofocus="autofocus">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="password"> Contraseña: </label> 
+                        <br> 
+                        <input type="password" id="password" name="password" value="">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="hidden"> Oculto: </label> 
+                        <br> 
+                        <input type="hidden" id="hidden" name="hidden" value="">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="disabled"> Campo deshabilitado: </label> 
+                        <br> 
+                        <input type="text" id="disabled" name="disabled" disabled="disabled" value="valor deshabilitado">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="readonly"> Campo de solo lectura: </label> 
+                        <br> 
+                        <input type="text" id="readonly" name="readonly" readonly="readonly" value="valorSoloLectura">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="chkdeportes"> Practica deportes </label> 
+                        <br> 
+                        <input type="checkbox" id="chkdeportes" name="chkdeportes" value="si">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="chkmusica"> Practica musica </label> 
+                        <br> 
+                        <input type="checkbox" id="chkmusica" name="chkmusica" value="si">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="chkpintura"> Practica pintura </label> 
+                        <br> 
+                        <input type="checkbox" id="chkpintura" name="chkpintura" value="si">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="radsexo"> Sexo </label> 
+                        <br> 
+                        <label for="radmasculino"> Masculino </label>
+                        <input type="radio" id="radmasculino" name="radsexo" value="M" checked="checked"> 
+                        <label for="radx"> X </label>  
+                        <input type="radio" id="radx" name="radsexo" value="X">
+                        <label for="radfemenino"> Femenino </label>
+                        <input type="radio" id="radfemenino" name="radsexo" value="F">                     
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="estudios"> Estudios cursados </label> 
+                        <br> 
+                        <select id="estudios" name="Estudios">
+                            <option value="pri" selected="selected"> Primarios </option>
+                            <option value="sec" > Secundarios </option>
+                            <option value="ter" > Terciarios </option>
+                            <option value="uni" > Universitarios </option>
+                            <option value="pos" > Postgrado </option>
+                        </select>                       
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="fecha"> Fecha y Hora </label> 
+                        <br> 
+                        <input type="date" id="fecha" name="iptFecha">
+                        <input type="time" id="fecha" name="iptHora">                      
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="color"> Color </label> 
+                        <br> 
+                        <input type="color" id="color" name="iptColor">                                              
+                    </li>
+                    <br>
+                    <li>                         
+                        <input type="submit" name="btnEnviar" value="Enviar formulario sin validacion">                                              
+                    </li>
+                    <br>
+                    <li>                         
+                        <input type="reset" name="btnBlanquear" value="Blanquear a valores predeterminados">                                              
+                    </li>
+                </ul>
+            </form>
+        </section>
+
+        <section>
+            <h2> Formulario para entrada con validacion </h2>
+            <form action="./respuestaFormulario.html" target="_blank" method="get" data-tip="">
+                <ul>
+                    <li>
+                        <label style="font-weight:bold;" for="iptcomentario"> Comentario (validacion por requerido): </label> 
+                        <br> 
+                        <input type="text" id="iptcomentario" name="comentario" value="" placeholder="" required="required" 
+                        autofocus="autofocus">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="iptemail"> Email con doble validacion (x@x y required): </label> 
+                        <br> 
+                        <input type="email" id="iptemail" name="email" value="" placeholder="xxx@xxx.x" required="required">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="iptnument"> Numero entero limitado (validacion por tipo numerico y cotas): </label> 
+                        <br> 
+                        <input type="number" id="iptnument" name="numeroEntero" value="1" min="1" >                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="iptnumreal"> Numero decimal: </label> 
+                        <br> 
+                        <input type="number" id="iptnumreal" name="numeroEntero" min="0" max="5" step="0.1" 
+                        value="0.1">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="ipturl"> URL (validacion por requerido, http://): </label> 
+                        <br> 
+                        <input type="url" id="ipturl" name="url" value="" placeholder="http://xxx" required="required">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="iptpatt"> Pattern de validacion: </label> 
+                        <br> 
+                        <input type="text" id="iptpatt" name="pattern" value="" pattern="[a-z]{3}[1-2]{2}" 
+                        title="3 letras y 2 numeros, 2 o 1">                        
+                    </li>
+                    <br>
+                    <li>
+                        <label style="font-weight:bold;" for="iptpatt2"> Pattern de validacion: </label> 
+                        <br> 
+                        <input type="text" id="iptpatt2" name="pattern2" value="" pattern="+([54]){1} [11]{1} [1-9]{8}" 
+                        title="+(54) 11 xxxxxxxx" placeholder="+(54) 11 xxxxxxxx">                        
+                    </li>
+                    <br>
+                    <li>                         
+                        <input type="submit" name="btnEnviarV" value="Enviar formulario sin validacion">                                              
+                    </li>
+                    <br>
+                    <li>                         
+                        <input type="reset" name="btnBlanquearV" value="Blanquear a valores predeterminados">                                              
+                    </li>
+                </ul>
+            </form>
+        </section>
+
+        <footer>
+            <p>&#128100; Francisco Joaquin Catalano</p>
+            <p>&#9993; fcatalano653@alumnos.frh.utn.edu.ar</p>
+            <p># Legajo nº 27653</p>
+        </footer>
+
+    </body>
+</html>
