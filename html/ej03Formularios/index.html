@@ -152,18 +152,18 @@
                         <label style="font-weight:bold;" for="iptpatt"> Pattern de validacion: </label> 
                         <br> 
                         <input type="text" id="iptpatt" name="pattern" value="" pattern="[a-z]{3}[1-2]{2}" 
-                        title="3 letras y 2 numeros, 2 o 1">                        
+                        title="3 letras y 2 numeros, 2 o 1" required="required">                        
                     </li>
                     <br>
                     <li>
                         <label style="font-weight:bold;" for="iptpatt2"> Pattern de validacion: </label> 
                         <br> 
-                        <input type="text" id="iptpatt2" name="pattern2" value="" pattern="+([54]){1} [11]{1} [1-9]{8}" 
-                        title="+(54) 11 xxxxxxxx" placeholder="+(54) 11 xxxxxxxx">                        
+                        <input type="text" id="iptpatt2" name="pattern2" value="" pattern="^\(\+[1-9]{2}\)\s[1-9]{2,3}\s[0-9]{6,8}$" 
+                        title="(+54) 11 00000000" placeholder="(+54) 11 00000000" required="required">                        
                     </li>
                     <br>
                     <li>                         
-                        <input type="submit" name="btnEnviarV" value="Enviar formulario sin validacion">                                              
+                        <input type="submit" name="btnEnviarV" value="Enviar formulario con validacion">                                              
                     </li>
                     <br>
                     <li>                         

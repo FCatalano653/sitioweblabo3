@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Ejercicios Css </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <style>
+            
+            a{
+                font-size: 0.8em;                
+            }
+
+            p{
+                margin-bottom: 3em;
+                
+            }
+
+            .claseResaltado{
+                background-color: yellow;
+                font-weight: bold;
+            }
+
+            .claseAcotacion{
+                font-size: 0.8em;
+                color:blue;
+                font-style: italic;
+                border-color: blue;
+                border-style:solid;
+                border-width: thin;
+                text-align: center;
+                padding: 1.3em;
+                
+            }
+            .claseAyuda{
+                font-style: italic;
+                color: orange;
+                font-size: 0.9em;
+                border-width: thin;
+                border-style: solid;
+                border-color: goldenrod;
+                width: 50%;
+                text-align: center;
+            }
+
+            #idUnico{
+                font-style: italic;
+                color: red;                
+                border-width: thin;
+                border-style: solid;
+                border-color: red;
+                width: 25%;
+                font-weight: bold;
+                text-align: center;
+            }
+            
+            .imagenAl50{
+                width: 50%;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        
+        <header>
+            <h1> A partir de esta pagina no usaremos mas el atributo style en ninguna etiqueta </h1>
+            <h1> Todo el estilo sera definido dentro de una etiqueta style como "clase", anidada en la etiqueta head del documento </h1>
+            <h1> Todos los parrafos tienen un default como estilo que incluyen un margin-bottom para separarlos mas entre ellos </h1>
+
+            <a href="../../index.html"> Volver a Indice de ejercicios</a>
+
+            <p> Este parrafo contiene un grupo de palabras delimitado por una etiqueta "span". El comienzo es aqui: <span class="claseResaltado"> grupo de palabras destacadas con el estilo claseResaltado </span> blablablablabla blablablablabla blablablablabla</p>
+
+            <p class="claseAcotacion"> Este parrafo toma el estilo definido en la etiqueta style en el head del documento como class="claseAcotacion" </p>
+
+            <p class="claseResaltado"> Este parrafo toma el estilo definido en la etiqueta style en el head del documento como class="claseResaltado" </p>
+
+            <p class="claseAyuda"> Este parrafo toma el estilo definido en la etiqueta head del documento como class="claseAyuda" </p>
+
+            <p id="idUnico"> Parrafo formateado por un estilo particular definido en el style del documento para un parrafo especifico id="idUnico". No se trata de un selector de clase sino de un selector de elemento "#" </p>
+
+            <h2> Todas las imagenes con class="imagenAl50" en esta pagina se encuentran limitadas al 50% del ancho del contenedor mas alla de su tamaño real en px </h2>
+
+            <img class="imagenAl50" src="../../../html/ej01HtmlBasico/no-code-scaled.webp">
+
+
+        </header>
+
+        
+
+        <footer>
+            <p>&#128100; Francisco Joaquin Catalano</p>
+            <p>&#9993; fcatalano653@alumnos.frh.utn.edu.ar</p>
+            <p># Legajo nº 27653</p>
+        </footer>
+
+    </body>
+</html>

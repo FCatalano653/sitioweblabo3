@@ -1,0 +1,54 @@
+
+
+    *{
+        font-size: 32px;
+        
+    }
+
+    h1{                        
+        text-align: center;   
+        background-color:lightgray;
+        font-size: 1.5em;     
+        margin-top: 0.4em;
+        margin-bottom: 0.2em;
+    }
+
+    a{
+        font-size: 0.4em;                
+    }
+
+    p{
+        text-align: left;
+        font-size: 0.5em;
+        background-color:lightgray;
+    }
+
+    @media (min-width: 800px) and (max-width: 1080px)
+    {
+        *{
+            font-size: 2em;
+        }
+        h1{
+            background-color: lightgoldenrodyellow;
+        }
+        p{
+            background-color: lightgoldenrodyellow;
+        }
+        
+    }
+
+    @media (max-width: 800px)
+    {
+        *{
+             font-size: 3em;
+        }
+        h1{
+            background-color: lightblue;
+        }
+        p{
+            background-color: lightblue;
+         }
+    }
+
+    
+            
