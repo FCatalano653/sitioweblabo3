@@ -28,12 +28,11 @@
     }  
 
     .divPrincipal{
-        background-color: cornflowerblue;        
-        margin-left: 10%;
-        margin-right: 10%;
+        background-color: cornflowerblue;                
         border-radius: 0;
-        width: auto;
+        width: 80%;
         height: auto;
+        
         
     }
 
