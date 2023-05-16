@@ -18,20 +18,27 @@
     div{
         margin: auto;
         height: 80px;
-        width: 160px;
+        width: 180px;
         border-radius: 10px;
         margin-bottom: 15px;   
         margin-right: 15px;
         margin-left: 15px;
         text-align: center;     
         float: left;
+        
+        
     }  
+
+    /* #div2, #div3{
+        clear: both;
+    } */
 
     .divPrincipal{
         background-color: cornflowerblue;                
         border-radius: 0;
         width: 80%;
         height: auto;
+        
         
         
     }

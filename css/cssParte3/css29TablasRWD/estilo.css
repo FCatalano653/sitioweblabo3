@@ -1,0 +1,105 @@
+
+    *{        
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;              
+        
+    }
+
+    body{
+        overflow: hidden;
+    }
+
+    header{
+        background-color: darkcyan;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    table{
+        border-spacing: 0px;  
+        overflow-y: scroll;      
+    }
+
+    footer{
+        background-color: gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    tbody{
+        background-color: darkcyan;
+        font-size: 22px;
+        
+        
+        
+    }
+
+    tbody tr:nth-child(odd){
+        background: rgba(0,0,0,.2);
+    }
+
+    thead{
+        background-color: orange;
+        height: 60px;
+        
+        
+    }
+
+    [campo-id='Id']{
+        width: 5%;
+    }
+
+    [campo-dato='Nick']{        
+        width: 10%;        
+    }
+
+    [campo-dato='Email']{
+        color: white;
+        width: 30%;
+    }
+
+    [campo-dato='Web']{        
+        width: 40%;
+    }
+
+    [campo-dato='Twitter']{        
+        width: 10%;
+    }
+
+    [campo-dato='Skype']{        
+        width: 10%;
+    }
+
+    #divPrincipal{        
+        height: 80%;               
+        overflow-y: scroll;    
+    }
+
+    @media (max-width:1200px){
+        [campo-dato='Skype']{
+            display: none;
+        }
+    }
+
+    @media (max-width:600px){
+        [campo-dato='Skype']{
+            display: none;
+        }
+        [campo-dato='Twitter']{
+            display: none;
+        }
+        [campo-dato='Web']{
+            display: none;
+        }
+        *{
+            font-size: 1.1em;
+        }
+        
+    }
+
+    

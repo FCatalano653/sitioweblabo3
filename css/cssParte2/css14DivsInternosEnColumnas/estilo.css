@@ -42,6 +42,7 @@
         
         div{
             background-color: yellow;
+            clear: both;
         }
 
         .divPrincipal{
