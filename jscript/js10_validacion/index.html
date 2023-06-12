@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Ejercicios Jscript </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <style type="text/css">
+            div{
+                margin-left: 10%;
+                margin-right: 10%;
+                background-color: lightblue;
+            }
+            input{
+                display: block;
+                margin-bottom: 10px;
+            }
+            button{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 30%;
+                padding: 5px;
+            }
+        </style>
+
+    </head>
+    <body>
+        
+        <header>
+            <h1> Ejer validacion de un INPUT</h1>
+            <a href="../index.html"> Volver a Indice de ejercicios</a>
+        </header>
+
+        <div>
+        
+            <form id="1" >
+                <label for="2"> Ingrese el dia del mes: </label>
+                <input id="2" type="number" name="dia" min="1" max="31">
+
+                <label for="3"> Ingrese el mes: </label>
+                <input id="3" type="number" name="mes" min="1" max="12">
+
+            </form>
+
+            <button id="4"> Blanquear </button>
+            <button id="5"> Enviar </button>
+
+        </div>
+
+
+        <script type="text/jscript">
+            
+            document.getElementById("1").method = "get";
+            document.getElementById("1").action="../../html/ej03Formularios/respuestaFormulario.html"
+
+            //Valid
+            document.getElementById("2").onkeyup = function(){
+                if (document.getElementById("2").validity.rangeOverflow
+                    || document.getElementById("2").validity.rangeUnderflow) {
+                    alert("El valor debe estar entre 1 y 31");
+                    document.getElementById("1").reset();
+                }
+            }
+
+            document.getElementById("3").onkeyup = function(){
+                if (document.getElementById("3").validity.rangeOverflow
+                    || document.getElementById("3").validity.rangeUnderflow) {
+                    alert("El valor debe estar entre 1 y 12");
+                    document.getElementById("1").reset();
+                }
+            }
+
+            //Enviar
+            document.getElementById("5").onclick = function(){
+                if (confirm("¿Desea enviar la informacion?")) {
+                    document.getElementById("1").submit();
+                }
+            }
+
+            //Blanquear
+            document.getElementById("4").onclick = function(){
+                if (confirm("¿Desea Blanquear los campos?")) {
+                    document.getElementById("1").reset();
+                }
+            }
+
+        </script>
+        
+      
+    </body>
+</html>

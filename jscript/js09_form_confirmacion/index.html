@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Ejercicios Jscript </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <style type="text/css">
+            div{
+                margin-left: 10%;
+                margin-right: 10%;
+                background-color: lightblue;
+            }
+            input{
+                display: block;
+            }
+        </style>
+
+    </head>
+    <body>
+        
+        <div>
+        
+            <h1> Confirmacion de envio y de reset </h1>
+            <a href="../index.html"> Volver a Indice de ejercicios</a>
+            
+            <form id="1" >
+                <label for="2"> Nombre: </label>
+                <input id="2" type="text" name="Nombre">
+
+                <label for="3"> Apellido: </label>
+                <input id="3" type="text" name="Apellido">
+
+            </form>
+
+            <button id="4"> Blanquear </button>
+            <button id="5"> Enviar </button>
+
+        </div>
+
+
+        <script type="text/jscript">
+            
+            document.getElementById("1").method = "get";
+            document.getElementById("1").action="../../html/ej03Formularios/respuestaFormulario.html"
+
+            //Enviar
+            document.getElementById("5").onclick = function(){
+                if (confirm("¿Desea enviar la informacion?")) {
+                    document.getElementById("1").submit();
+                }
+            }
+
+            //Blanquear
+            document.getElementById("4").onclick = function(){
+                if (confirm("¿Desea Blanquear los campos?")) {
+                    document.getElementById("1").reset();
+                }
+            }
+
+        </script>
+        
+      
+    </body>
+</html>

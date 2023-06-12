@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Ejercicios Jscript </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    </head>
+    <body>
+        
+        <header>
+            <h1> 
+                Convertir valor input a mayusculas cuando cambia el foco
+            </h1>
+            <a href="../index.html"> Volver a Indice de ejercicios</a>
+            
+        </header>
+
+        <input id="1" type="text" text="" 
+        pattern="[[a-z]{20}" placeholder="ABCDEFGHI">
+
+        <script type="text/jscript">
+            
+            document.getElementById("1").onchange = function(){
+                
+                this.value = this.value.toUpperCase();
+                
+            }
+
+        </script>
+        
+      
+    </body>
+</html>

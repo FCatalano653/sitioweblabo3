@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Ejercicios Jscript </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <style type="text/css">
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            ul{
+                width: 15%;
+                height: 300px;
+                padding: 30px;
+            }
+
+            button{
+                margin-top: 20px;                
+            }
+
+            .tipo1{
+                border: solid;
+                background-color: brown;
+                text-decoration: underline;
+                padding-top: 50px;
+            }
+
+            .tipo2{
+                border: solid;
+                border-color: blueviolet;
+                background-color: lightcoral;
+                color: blue;
+                list-style: upper-alpha;
+                padding-top: 50px;
+            }
+
+            .tipo3{
+                border: solid;
+                border-color: gray;
+                background-color: black;
+                color:chartreuse;
+                list-style:armenian;                
+            }
+
+            .tipo4{
+                border: solid;
+                border-color: pink;
+                background-color: lightseagreen;
+                color:white;
+                list-style:georgian;                
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <h1> Ejemplo de cambios de estilo dinamicamente </h1>
+
+        <ul id="1">
+            <h2> Lista con estilo </h2>
+            <li> <p> Texto1 </p> </li>
+            <li> <p> Texto2 </p> </li>
+            <li> <p> Texto3 </p> </li>
+        </ul>
+
+        <button  id="2"> Tipo 1 </button>
+        <button id="3"> Tipo 2 </button>
+        <button id="4"> Tipo 3 </button>
+        <button id="5"> Tipo 4 </button>
+
+        <script type="text/jscript">
+            
+            
+            document.getElementById("2").onclick = function(){
+                document.getElementById("1").className = "tipo1"
+            }
+
+            document.getElementById("3").onclick = function(){
+                document.getElementById("1").className = "tipo2"
+            }
+
+            document.getElementById("4").onclick = function(){
+                document.getElementById("1").className = "tipo3"
+            }
+
+            document.getElementById("5").onclick = function(){
+                document.getElementById("1").className = "tipo4"
+            }
+
+            
+
+        </script>
+        
+      
+    </body>
+</html>

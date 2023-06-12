@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Ejercicios Jscript </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <script type="text/jscript">
+            var a;            
+        </script>
+
+    </head>
+    <body>
+        
+        <header>
+            
+            <a href="../index.html"> Volver a Indice de ejercicios</a>
+            
+        </header>
+
+        <button id="1">
+            Incializacion incorrecta
+        </button>
+
+        <button id="2">
+            Incializacion correcta
+        </button>
+
+        <button id="3"> 
+            Muestra variable global
+        </button>
+
+        
+        <script type="text/jscript">
+            
+            document.getElementById("1").onclick = function(){
+                
+                var a = prompt("Ingrese el valor de la variable");
+                alert("El valor de la variable local es: " + a);
+                alert("El tipo de la variable local es: " + typeof a);
+            }
+
+            document.getElementById("2").onclick = function(){
+                
+                a = prompt("Ingrese el valor de la variable");
+                alert("El valor de la variable global es: " + a);
+                alert("El tipo de la variable global es: " + typeof a);
+            }
+            document.getElementById("3").onclick = function(){
+                if (typeof a === 'undefined') {
+                    alert("La variable global no ha sido asignada")
+                }   
+                else {
+                    alert("El valor de la variable global es: " + a);
+                    alert("El tipo de la variable global es: " + typeof a);
+                }            
+                
+            }
+            
+        </script>
+        
+      
+    </body>
+</html>

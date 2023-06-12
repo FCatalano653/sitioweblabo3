@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Ejercicios Jscript </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <script type="text/jscript">
+            var objetoPersona = {nombre:"Jorge", apellido:"Catalano", fechaNac:"17/05/1965"};
+            var arregloPersonas = [objetoPersona];
+            arregloPersonas.push({nombre:"Sofia", apellido:"Reyes", fechaNac:"25/02/1991"});                                                    
+        </script>
+
+    </head>
+    <body>
+        
+        <header>
+            <h1> Introducir un valor en el cuadro de texto y 
+                luego pulsar el boton para ejecutar el procedimiento correspondiente </h1>
+            <a href="../index.html"> Volver a Indice de ejercicios</a>
+            
+        </header>
+
+        <h1> Consignas del ejercicio </h1>
+        <h2>
+            Declarar y hacer uso de Objetos de dato (datos de tipo objeto)
+        </h2>
+        <h2>
+            Cargar de 2 personas a un array por programa
+        </h2>
+        <h2>
+            Dejar de usar la funcion prompt() para el ingreso de datos. 
+             Armar un contenedor para el ingreso de datos desde consola (solo inputs sin formulario)
+        </h2>
+        <h2>
+            Dejar de usar document.write() y escribir contenido dentro de un elemento html (puede ser un div)            
+        </h2>
+        <h2>
+            Dos botones de para llamar a dos funciones.
+             Una para cargar un nuevo objeto de dato por teclado
+             y otra para mostrar en formato de tabla el array completo de elementos y su longitud. 
+        </h2>
+        <h2>
+            Un tercer procedimiento para ocultar el elemento de presentacion (usando el parametro de estilo display:none)            
+        </h2>
+
+        
+        <div style="background-color: lightblue; margin-left: 1%; margin-right: 1%;">
+            <h2> Adicionar persona </h2>
+            
+            <label for="1"> Nombre: </label>
+            <input id="1" style="display: block;">
+
+            <label for="2"> Apellido: </label>
+            <input id="2" style="display: block;">
+
+            <label for="3"> Fecha de Nacimiento: </label>
+            <input id="3" style="display: block;">
+
+            <button id="4"> Crear Persona </button>
+
+        </div>
+
+        <div style="background-color: lightyellow; margin-left: 1%; margin-right: 1%;">
+            <h2> Control </h2>
+            <button id="5"> Listar personas </button>
+            <button id="6"> Ocultar presentacion </button>
+        </div>
+
+        <div id="7" style="display: none;">
+
+        </div>
+
+        <script type="text/jscript">
+            
+            //Creacion persona
+            document.getElementById("4").onclick = function(){
+                arregloPersonas.push({nombre:document.getElementById("1").value,
+                    apellido:document.getElementById("2").value,
+                    fechaNac:document.getElementById("3").value});
+                    document.getElementById("5").onclick.call();
+            }
+
+            //Listar personas
+            document.getElementById("5").onclick = function listar(){
+                
+                var elementosHtml ="<h1> Presentacion </h1>";
+                elementosHtml = elementosHtml + "<table style='border-collapse:collapse; border:solid'> <tbody>";
+                
+                arregloPersonas.forEach(function(item) {
+                    elementosHtml = elementosHtml + "<tr>"
+                        + "<td>"+ item.nombre + "</td>" 
+                        + "<td>"+ item.apellido + "</td>" 
+                        + "<td>"+ item.fechaNac + "</td>" 
+                        +"</tr>";
+
+                });
+
+                elementosHtml = elementosHtml + "</tbody> </table> <h4> Longitud del arreglo de objetos:" + arregloPersonas.length +"</h4>";
+
+                
+                document.getElementById("7").innerHTML = elementosHtml;
+                document.getElementById("7").style.display = "block";
+                
+            }
+
+            //Ocultar presentacion
+            document.getElementById("6").onclick = function(){
+                document.getElementById("7").style.display = "none";
+            }
+            
+            
+        </script>
+        
+      
+    </body>
+</html>

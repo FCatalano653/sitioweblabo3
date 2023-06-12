@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Ejercicios Jscript </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <script type="text/jscript">
+            a = 0;            
+        </script>
+
+    </head>
+    <body>
+        
+        <header>
+            <h1> Introducir un valor en el cuadro de texto y 
+                luego pulsar el boton para ejecutar el procedimiento correspondiente </h1>
+            <a href="../index.html"> Volver a Indice de ejercicios</a>
+            
+        </header>
+
+        <input id="1" type="text" text="" 
+        pattern="[[1-9]{12}" placeholder="000000000000">
+
+        <button id="2">
+            Muestra valor
+        </button>
+
+        <button id="3">
+            Suma 1
+        </button>
+
+        <button id="4"> 
+            x"2
+        </button>
+
+        <button id="5"> 
+            Multiplica * 2
+        </button>
+
+        <button id="6"> 
+            2"x
+        </button>
+
+        
+        <script type="text/jscript">
+            
+            document.getElementById("2").onclick = function(){
+                
+                a = parseInt(document.getElementById("1").value);
+                alert("El valor ingresado es: " + a);
+                
+            }
+
+            document.getElementById("3").onclick = function(){
+                a = parseInt(document.getElementById("1").value);
+                a++;                
+                document.getElementById("1").value = a;                
+            }
+            document.getElementById("4").onclick = function(){
+                a = parseInt(document.getElementById("1").value);
+                a = a*a;                
+                document.getElementById("1").value = a;             
+                
+            }
+            document.getElementById("5").onclick = function(){
+                a = parseInt(document.getElementById("1").value);
+                a = a*2;                
+                document.getElementById("1").value = a;             
+                
+            }
+            document.getElementById("6").onclick = function(){
+                a = parseInt(document.getElementById("1").value);
+                a = 2*a;                
+                document.getElementById("1").value = a;             
+                
+            }
+            
+        </script>
+        
+      
+    </body>
+</html>

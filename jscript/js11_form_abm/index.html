@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Ejercicios Jscript </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <style type="text/css">
+            .divFormABM{
+                position: fixed;
+                top: 20%;
+                left: 25%;                        
+                overflow-y: auto;
+                overflow-x: auto;
+                z-index: 10;
+                width: 20%;
+                height: 30%;
+                background-color: lightblue;
+            }
+            .divModal{
+                position: fixed;
+                top: 20%;
+                left: 25%;                        
+                overflow-y: auto;
+                overflow-x: auto;
+                z-index: 10;
+                width: 40%;
+                height: 40%;
+                background-color: gray;
+                
+            }
+
+            .divBtns{
+                position: absolute;                
+                bottom: 0%;
+                left: 33%;
+                
+            }
+
+            button{
+                margin-bottom: 14%;                
+            }
+
+            input{
+                display: block;
+                margin-bottom: 10px;
+            }
+            
+            h1{
+                margin-left: 4%;
+            }
+
+            form{
+                margin-left: 8%;
+            }
+        </style>
+
+    </head>
+    <body>
+        
+        <p> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque dicta, alias fugiat porro iste tempora distinctio iusto a dolorum voluptate adipisci incidunt eos nobis nemo beatae soluta magni dolor.  
+        </p>
+
+
+        <div class="divModal">
+
+            <div class="divFormABM">
+
+                <h1> Formulario ABM </h1>
+            
+                <form id="1" >
+                    <label for="2"> Apellido: </label>
+                    <input id="2" type="text" name="apellido">
+    
+                    <label for="3"> Nombres: </label>
+                    <input id="3" type="text" name="nombres">
+    
+                    <label for="4"> Saldo: </label>
+                    <input id="4" type="number"  name="saldo"  min="100"
+                    title="El valor debe ser superior o igual a 100">
+    
+                </form>
+    
+            </div>
+
+            <div class="divBtns">
+                <button name="btnBlanquear" id="5"> Blanquear </button>
+                <button name="btnAlta" id="6"> Alta </button>
+                <button name="btnModificar" id="7"> Modificar </button>
+                <button name="btnBaja" id="8"> Baja </button>
+            </div>
+            
+        </div>
+
+
+        <script type="text/jscript">
+            
+            btnBlanquear = document.getElementById("5");            
+            btnAlta = document.getElementById("6");
+            btnModificar = document.getElementById("7");
+            btnBaja = document.getElementById("8");
+            deshabilitarBtns();
+
+            document.getElementById("1").method = "get";
+            document.getElementById("1").action="../../html/ej03Formularios/respuestaFormulario.html"
+
+            //Valid
+            document.getElementById("4").onkeyup = function(){
+                if (document.getElementById("4").value != "") {                    
+                    btnBlanquear.disabled = false;
+                    if (!document.getElementById("4").validity.rangeUnderflow                    
+                    && document.getElementById("2").value != ""
+                    && document.getElementById("3").value != "") {                    
+                    todoListo(); } 
+                    else 
+                    { 
+                        btnAlta.disabled = true;
+                        btnModificar.disabled = true;
+                        btnBaja.disabled = true;
+                    }
+                }  
+                else{ btnBlanquear.disabled = true; } 
+                             
+            }
+
+            document.getElementById("2").onkeyup = function(){
+                if (!document.getElementById("4").validity.rangeUnderflow
+                    && document.getElementById("4").value != ""
+                    && document.getElementById("2").value != ""
+                    && document.getElementById("3").value != "") {                    
+                    todoListo();
+                } 
+                else
+                { 
+                    btnAlta.disabled = true;
+                    btnModificar.disabled = true;
+                    btnBaja.disabled = true; 
+                }                               
+            }
+
+            document.getElementById("3").onkeyup = function(){
+                if (!document.getElementById("4").validity.rangeUnderflow
+                    && document.getElementById("4").value != ""
+                    && document.getElementById("2").value != ""
+                    && document.getElementById("3").value != "") {                    
+                    todoListo();
+                } 
+                else
+                { 
+                    btnAlta.disabled = true;
+                    btnModificar.disabled = true;
+                    btnBaja.disabled = true; 
+                }          
+            }
+
+            function todoListo() {
+                btnBlanquear.disabled = false;
+                btnAlta.disabled = false;
+                btnModificar.disabled = false;
+                btnBaja.disabled = false;
+            }
+
+            function deshabilitarBtns() {
+                btnBlanquear.disabled = true;
+                btnAlta.disabled = true;
+                btnModificar.disabled = true;
+                btnBaja.disabled = true;
+            }
+
+            //Enviar
+            document.getElementById("6").onclick = function(){
+                if (confirm("¿Desea enviar la informacion?")) {
+                    document.getElementById("1").submit();
+                }
+            }
+
+            //Blanquear
+            document.getElementById("5").onclick = function(){
+                if (confirm("¿Desea Blanquear los campos?")) {
+                    document.getElementById("1").reset();
+                }
+            }
+
+        </script>
+        
+      
+    </body>
+</html>
