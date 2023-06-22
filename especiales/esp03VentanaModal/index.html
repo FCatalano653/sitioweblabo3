@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Ejercicios Jscript </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-size: 22px;
+                overflow: hidden;
+            }
+            
+            #1{
+                width: 100vw;
+                height: 100vh;
+                background-color: brown;
+            }
+
+            header{
+                height: 10%;
+                background-color: lightcyan;
+                text-align: center;
+                padding: 10px;                
+            }  
+            
+            footer{
+                height: 10%;
+                background-color: lightcyan; 
+                padding: 10px;                
+                clear: both;
+                text-align: center;
+            }
+            select{
+                margin-top: 20px;
+                margin-left: 20px;
+                height: 6%;
+                width: 80%;
+                display: block;
+            }
+            label{
+                margin-top: 20px;
+                margin-left: 20px;
+                display: block;
+            }
+            input{
+                margin-left: 20px;
+                margin-top: 20px;
+                height: 6%;
+                width: 80%;
+                display: block;                
+            }
+
+            .divMainIzq{
+                
+                width: 50%;
+                height: 80%;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                float: left;
+                background-color: lightgoldenrodyellow;
+                                
+            }
+            .divMainDer{
+                
+                width: 50%;
+                height: 80%;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                float: left;
+                background-color: lightgoldenrodyellow;
+               
+            }
+
+            div.contenedorActivo{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            div.contenedorApagado{
+
+                opacity: 0.4;
+                pointer-events: none;
+            }
+
+            div.ventanaModalPrendido{
+                visibility: visible;
+                position: fixed;
+                top: 20%;
+                left: 25%;                    
+                overflow-y: auto;
+                overflow-x: auto;
+                z-index: 10;
+                width: 40%;
+                height: 60%;
+                display: block;
+                
+            }
+
+            div.ventanaModalApagado{
+                visibility: hidden;
+                display: none;
+            }
+
+            button.btnCerrar{
+                float: right;
+                color: red;
+                width: 3%;
+                height: 3%;
+                
+            }
+
+        </style>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" >
+
+        </script>
+
+        <script>
+            var stringMarcas = '{"marcas":["Continental", "Monroe", "Corven"]}';
+            
+            objJson = JSON.parse(stringMarcas);
+
+            function llenarMarcasSelect(){ 
+                objJson.marcas.forEach(function(value) {                    
+                    var objOption = document.createElement("option");
+                    objOption.setAttribute("value", value);
+                    objOption.innerHTML = value;
+                    document.getElementById("3").appendChild(objOption);
+                });
+            }
+
+            $(document).ready(function(){
+                llenarMarcasSelect();
+
+                document.getElementById("4").onclick = function(){
+                    document.getElementById("2").className="ventanaModalPrendido";
+                    document.getElementById("1").className="contenedorApagado";
+                    
+                }
+
+                document.getElementById("5").onclick = function(){
+                    document.getElementById("2").className="ventanaModalApagado";
+                    document.getElementById("1").className="contenedorPrendido";
+                    
+                }
+
+            });
+
+
+        </script>
+
+    </head>
+    <body>
+
+        
+        <div id="1">
+            <h1> Div contenedor </h1>
+
+            <button id="4"> Abrir Div Modal </button>
+
+            <h2> Ejercicio Formulario Modal </h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, eligendi nobis? Porro at sit hic earum exercitationem ab animi amet, consequatur officiis iusto officia veritatis, labore, rem praesentium ea dolorem?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, eligendi nobis? Porro at sit hic earum exercitationem ab animi amet, consequatur officiis iusto officia veritatis, labore, rem praesentium ea dolorem?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, eligendi nobis? Porro at sit hic earum exercitationem ab animi amet, consequatur officiis iusto officia veritatis, labore, rem praesentium ea dolorem?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, eligendi nobis? Porro at sit hic earum exercitationem ab animi amet, consequatur officiis iusto officia veritatis, labore, rem praesentium ea dolorem?</p>
+        </div>
+
+        <div id="2" class="ventanaModalApagado">
+
+            <header>
+                <div class="divHeader">
+                    <h1> Formulario ALTA - Autopartes </h1>
+
+                    <button id="5" class="btnCerrar"> X </button>
+
+                </div>
+            </header>
+      
+            <form  action="../../html/ej03Formularios/respuestaFormulario.html" method="get">
+                <div class="divMainIzq">
+                    <label> Id </label>
+                    <input name="id" type="number" min="1">
+    
+                    <label> Codigo </label>
+                    <input name="cod" type="text">
+    
+                    <label> Descripcion </label>
+                    <input name="descrip" type="text">
+                </div>
+    
+                <div class="divMainDer">
+                    <label> Marca </label>
+                    <select id="3" name="selectMarca">
+    
+                    </select>
+    
+                    <label> Fecha Ingreso </label>
+                    <input type="date" name="fechaAlta">
+    
+                    <input value="ENVIAR" type="submit">
+    
+                </div>
+            </form>          
+                 
+            <footer>
+                <div>
+                    <h2> Pie del formulario </h2>
+                </div>            
+            </footer>
+
+        </div>
+        
+
+    </body>
+</html>

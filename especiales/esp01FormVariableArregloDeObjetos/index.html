@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Ejercicios Jscript </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-size: 22px;
+                overflow: hidden;
+            }
+            
+            header{
+                height: 10vh;
+                background-color: lightcyan;
+                text-align: center;
+                padding: 10px;                
+            }  
+            
+            footer{
+                height: 10vh;
+                background-color: lightcyan; 
+                padding: 10px;                
+                clear: both;
+                text-align: center;
+            }
+            select{
+                margin-top: 20px;
+                margin-left: 20px;
+                height: 6%;
+                width: 80%;
+                display: block;
+            }
+            label{
+                margin-top: 20px;
+                margin-left: 20px;
+                display: block;
+            }
+            input{
+                margin-left: 20px;
+                margin-top: 20px;
+                height: 6%;
+                width: 80%;
+                display: block;                
+            }
+
+            .divMainIzq{
+                
+                width: 50vw;
+                height: 80vh;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                float: left;
+                background-color: lightgoldenrodyellow;
+                                
+            }
+            .divMainDer{
+                
+                width: 50vw;
+                height: 80vh;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                float: left;
+                background-color: lightgoldenrodyellow;
+               
+            }
+
+
+        </style>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" >
+
+        </script>
+
+        <script>
+            var stringMarcas = '{"marcas":["Continental", "Monroe", "Corven"]}';
+            
+            objJson = JSON.parse(stringMarcas);
+
+            function llenarMarcasSelect(){ 
+                objJson.marcas.forEach(function(value) {                    
+                    var objOption = document.createElement("option");
+                    objOption.setAttribute("value", value);
+                    objOption.innerHTML = value;
+                    document.getElementById("1").appendChild(objOption);
+                });
+            }
+
+            $(document).ready(function(){
+                llenarMarcasSelect();
+            });
+
+
+        </script>
+
+    </head>
+    <body>
+
+        
+        
+
+        
+
+            <header>
+                <div class="divHeader">
+                    <h1> Formulario ALTA - Autopartes </h1>
+                </div>
+            </header>
+      
+            <form  action="../../html/ej03Formularios/respuestaFormulario.html" method="get">
+                <div class="divMainIzq">
+                    <label> Id </label>
+                    <input name="id" type="number" min="1">
+    
+                    <label> Codigo </label>
+                    <input name="cod" type="text">
+    
+                    <label> Descripcion </label>
+                    <input name="descrip" type="text">
+                </div>
+    
+                <div class="divMainDer">
+                    <label> Marca </label>
+                    <select id="1" name="selectMarca">
+    
+                    </select>
+    
+                    <label> Fecha Ingreso </label>
+                    <input type="date" name="fechaAlta">
+    
+                    <input value="ENVIAR" type="submit">
+    
+                </div>
+            </form>          
+                 
+            <footer>
+                <div>
+                    <h2> Pie del formulario </h2>
+                </div>            
+            </footer>
+
+        
+        
+
+    </body>
+</html>
