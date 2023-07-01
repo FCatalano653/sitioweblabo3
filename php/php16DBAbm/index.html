@@ -44,52 +44,56 @@
             
             thead{
                 background-color: cornflowerblue;
-                height: 5%;
+                height: 10%;
             }
 
-            tfoot{
-                background-color: cornflowerblue;
-                height: 5%;
-            }
 
             [campo-dato='Id']{
-                width: 5%;                
+                width: 2%;                
             }
-
-            [campo-dato='Codigo']{
-                width: 10%;                
-            }
-
+         
             [campo-dato='Descripcion']{
                 width: 30%;                
             }
 
-            [campo-dato='Marca']{
-                width: 10%;                
-            }
-
-            [campo-dato='FechaIngreso']{
-                width: 10%;                
-            }
-
-            [campo-dato='Stock']{
-                width:5%;                
-            }
-
-            [campo-dato='Precio']{
-                width: 10%;                
-            }
-
             [campo-dato='Pdfs']{
-                width: 6.6%;                
+                width: 6%;                
             }
 
             [campo-dato='Modis']{
-                width: 6.6%;                
+                width: 6%;                
             }
 
             [campo-dato='Bajas']{
-                width: 6.6%;                
+                width: 6%;                
+            }
+
+            @media (max-width:1200px){
+                [campo-dato='FechaIngreso']{
+                    display: none;
+                }
+                [campo-dato='Stock']{
+                    display: none;
+                }
+            }
+
+            @media (max-width:600px){
+                [campo-dato='FechaIngreso']{
+                    display: none;
+                }
+                [campo-dato='Stock']{
+                    display: none;
+                }
+                [campo-dato='Marca']{
+                    display: none;
+                }
+                [campo-dato='Codigo']{
+                    display: none;
+                }
+                *{
+                    font-size: 1.1em;
+                }
+        
             }
 
             tr:nth-child(even) {
@@ -111,9 +115,9 @@
                 width: 100vw;
                 overflow-y: visible;
                 height: 80vh;
-                padding-top: 10px;
+                /* padding-top: 10px;
                 padding-bottom: 20px;
-                float: left;
+                float: left; */
                 background-image: linear-gradient(rgb(65, 61, 61), rgb(0, 0, 0));
                                 
             }
@@ -447,23 +451,23 @@
                             objTd.innerHTML = value.stock;
                             objTr.appendChild(objTd);
 
-                            // var objTd = document.createElement("td");
-                            // objTd.setAttribute("campo-dato", "Pdfs");
-                            // objButton = document.createElement("button")
-                            // objButton.innerHTML = "PDFS";
-                            // objTd.appendChild(objButton);
-                            // objTr.appendChild(objTd);
+                            var objTd = document.createElement("td");
+                            objTd.setAttribute("campo-dato", "Pdfs");
+                            objButton = document.createElement("button");
+                            objButton.innerHTML = "PDFS";
+                            objTd.appendChild(objButton);
+                            objTr.appendChild(objTd);
 
                             var objTd = document.createElement("td");
                             objTd.setAttribute("campo-dato", "Modis");
-                            objButton = document.createElement("button")
+                            objButton = document.createElement("button");
                             objButton.innerHTML = "Modi";
                             objTd.appendChild(objButton);
                             objTr.appendChild(objTd);
 
                             var objTd = document.createElement("td");
                             objTd.setAttribute("campo-dato", "Bajas");
-                            objButton = document.createElement("button")
+                            objButton = document.createElement("button");
                             objButton.innerHTML = "Borrar";
                             objTd.appendChild(objButton);
                             objTr.appendChild(objTd);
@@ -583,45 +587,60 @@
             <table >
                 <thead>
                     <tr >
-                        <th id="th_articulos_id" campo-dato="Id"> Id </th>
-                        <th id="th_articulos_codArt" campo-dato="Codigo"> Codigo </th>
-                        <th id="th_articulos_descrip" campo-dato="Descripcion"> Descripcion </th>
-                        <th id="th_articulos_marca" campo-dato="Marca"> Marca </th>
-                        <th id="th_articulos_fechaIngreso" campo-dato="FechaIngreso"> Fecha Ingreso </th>
-                        <th id="th_articulos_stock" campo-dato="Stock"> Stock </th>
-                        <th id="th_articulos_precio" campo-dato="Precio"> Precio </th>
-                        <!-- <th  campo-dato="Pdfs"> Pdfs </th> -->
+                        <th id="th_articulos_id" campo-dato="Id"> Id 
+                            
+                        </th>
+                        <th id="th_articulos_codArt" campo-dato="Codigo"> Codigo 
+                            
+                        </th>
+                        <th id="th_articulos_descrip" campo-dato="Descripcion"> Descripcion 
+                            
+                        </th>
+                        <th id="th_articulos_marca" campo-dato="Marca"> Marca 
+                            
+                        </th>
+                        <th id="th_articulos_fechaIngreso" campo-dato="FechaIngreso"> Fecha Ingreso 
+                            
+                        </th>
+                        <th id="th_articulos_stock" campo-dato="Stock"> Stock 
+                            
+                        </th>
+                        <th id="th_articulos_precio" campo-dato="Precio"> Precio 
+                            
+                        </th>
+                        <th  campo-dato="Pdfs"> Pdfs </th>
                         <th  campo-dato="Modis"> Modis </th>
                         <th  campo-dato="Bajas"> Bajas </th>
-                    </tr>
-                </thead>
-
-                <thead>
-                    <tr>                            
-                            <th> <input id="f_articulos_id" name="f_articulos_id" type="text"> </th>
-                            <th> <input id="f_articulos_codArt" name="f_articulos_codArt" type="text"> </th>
-                            <th> <input id="f_articulos_descrip" name="f_articulos_descrip" type="text"> </th>
-                            <th> <select id="f_articulos_marca" name="f_articulos_marca" > </select> </th>
-                            <th> <input id="f_articulos_fechaIngreso" name="f_articulos_fechaIngreso" type="text"> </th>
-                            <th> <input id="f_articulos_stock" name="f_articulos_stock" type="text"> </th>
-                            <th> <input id="f_articulos_precio" name="f_articulos_precio" type="text"> </th>                                                       
-                    </tr>
+                    </tr>          
+                    <tr>
+                        <th  campo-dato="Id">  
+                            <input id="f_articulos_id"  name="f_articulos_id" type="text">
+                        </th>
+                        <th  campo-dato="Codigo">  
+                            <input id="f_articulos_codArt" name="f_articulos_codArt" type="text">
+                        </th>
+                        <th  campo-dato="Descripcion">  
+                            <input id="f_articulos_descrip" name="f_articulos_descrip" type="text">
+                        </th>
+                        <th  campo-dato="Marca">  
+                            <select id="f_articulos_marca" name="f_articulos_marca" > </select>
+                        </th>
+                        <th  campo-dato="FechaIngreso">  
+                            <input id="f_articulos_fechaIngreso" name="f_articulos_fechaIngreso" type="date">
+                        </th>
+                        <th  campo-dato="Stock">  
+                            <input id="f_articulos_stock" name="f_articulos_stock" type="text">
+                        </th>
+                        <th  campo-dato="Precio">  
+                            <input id="f_articulos_precio" name="f_articulos_precio" type="text">
+                        </th>
+                    </tr>          
                 </thead>
 
                 <tbody id="tbDatos">
 
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <td> $ id </td>
-                        <td> $ codigo </td>
-                        <td> $ descripcion </td>
-                        <td> $ marca </td>
-                        <td> $ fecha ingreso </td>
-                        <td> $ stock </td>
-                        <td> $ precio </td>
-                    </tr>
-                </tfoot>
+                
             </table>
         </div>
 
