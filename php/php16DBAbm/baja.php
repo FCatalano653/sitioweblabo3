@@ -4,7 +4,8 @@
             
     $codArt = $_POST['codArt'];    
 
-    $respuesta_estado=$respuesta_estado . "\nBaja articulo <br/>\n";
+    $respuesta_estado=$respuesta_estado . "\nBaja articulo\n";
+    $respuesta_estado=$respuesta_estado . "\ncodArt:" . $codArt;
 
     $sql = "DELETE FROM articulos WHERE codArt=:codArt;";
 

@@ -36,6 +36,7 @@
             }
 
             table{
+                font-size: 0.7em;
                 width: 100%;
                 height: 100%;
                 border: 0;
@@ -52,23 +53,94 @@
             }
 
             [campo-dato='Id']{
-                width: 5%;                
+                width: 5%;
+                font-size: 0.8em;    
+                           
+            }
+            [campo-dato='Id'] input{
+                width: 100%;
+                
+            }
+
+            [campo-dato='Codigo']{
+                width: 5%;    
+                font-size: 0.8em;            
+            }
+
+            [campo-dato='Codigo'] input{
+                width: 100%;    
+                            
             }
          
             [campo-dato='Descripcion']{
-                width: 30%;                
+                width: 30%;     
+                font-size: 0.8em;           
+            }
+            [campo-dato='Descripcion'] input{
+                width: 100%;     
+                          
+            }
+
+            [campo-dato='Marca']{
+                width: 10%;   
+                font-size: 0.8em;             
+            }
+            [campo-dato='Marca'] select{
+                width: 100%;                                
+            }
+
+            [campo-dato='FechaIngreso']{
+                width: 10%;   
+                font-size: 0.8em;             
+            }
+            [campo-dato='FechaIngreso'] input{
+                width: 100%;   
+                            
+            }
+
+            [campo-dato='Stock']{
+                width: 2%;   
+                font-size: 0.8em;             
+            }
+
+            [campo-dato='Stock'] input{
+                width: 100%;                               
+            }
+
+            [campo-dato='Precio']{
+                width: 5%;   
+                font-size: 0.8em;             
+            }
+            [campo-dato='Precio'] input{
+                width: 100%;                                
             }
 
             [campo-dato='Pdfs']{
-                width: 6%;                
+                width: 6%;  
+                font-size: 0.8em;              
+            }
+
+            [campo-dato='Pdfs'] button{
+                width: 100%;  
+                padding: auto;              
             }
 
             [campo-dato='Modis']{
-                width: 6%;                
+                width: 6%;  
+                font-size: 0.8em;              
+            }
+            [campo-dato='Modis'] button{
+                width: 100%;  
+                padding: auto;              
             }
 
             [campo-dato='Bajas']{
-                width: 6%;                
+                width: 6%;   
+                font-size: 0.8em;             
+            }
+            [campo-dato='Bajas'] button{
+                width: 100%;  
+                padding: auto;              
             }
 
             @media (max-width:1200px) and (min-width:600px){
@@ -78,25 +150,50 @@
                 [campo-dato='Stock']{
                     display: none;
                 }
-            }
-
-            @media (max-width:600px) and (min-width:0px){
-                [campo-dato='FechaIngreso']{
-                    display: none;
-                }
-                [campo-dato='Stock']{
-                    display: none;
-                }
                 [campo-dato='Marca']{
                     display: none;
                 }
+            }
+
+            @media (max-width:600px) and (min-width:0px){
+                
+                [campo-dato='FechaIngreso']{
+                    display: none;
+                    width: 0;
+                }
+                [campo-dato='Stock']{
+                    display: none;
+                    width: 0;
+                }
+                [campo-dato='Marca']{
+                    display: none;
+                    width: 0;
+                }
                 [campo-dato='Codigo']{
                     display: none;
+                    width: 0;
                 }
-                /* *{
-                    font-size: 1.1em;
-                } */
-        
+                [campo-dato='Precio']{
+                    display: none;
+                    width: 0;
+                }
+                [campo-dato='Id']{
+                    width: 20%;
+                    
+                }
+                [campo-dato='Descripcion']{
+                    width: 50%;
+                }
+                [campo-dato='Pdfs']{
+                    width: 10%;
+                }
+                [campo-dato='Modis']{
+                    width: 10%;
+                }
+                [campo-dato='Bajas']{
+                    width: 10%;
+                }
+                
             }
 
             .divHeader{
@@ -146,7 +243,7 @@
             }
 
             .divHeaderModal{
-                height: 14%;
+                height: 10%;
                 background-image: linear-gradient(rgb(226, 226, 226), rgb(255, 255, 255));
                 text-align: center;
             }
@@ -180,7 +277,7 @@
                 overflow-x: auto;
                 z-index: 10;
                 width: 40%;
-                height: 15%;
+                height: 25%;
                 display: block;
             }
 
@@ -227,8 +324,12 @@
                 
                 margin-top: 10px;
             }
-            
 
+            #divModalRespuesta{
+                background-image: linear-gradient(to right, rgb(100, 148, 237), rgb(173, 216, 230));
+                font-size: 0.8em;
+            }
+            
         </style>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script  type="text/javascript">
@@ -240,12 +341,8 @@
                 
                 objTbDatos=document.getElementById("tbDatos");
 
-                $("#ventanaModalForumularioAlta").attr("visibility", "hidden");
-                //$("#ventanaModalForumularioModi").attr("visibility", "hidden");
-                $("#ventanaModalRespuesta").attr("visibility", "hidden");
-
                 $("#btEnvioFormAlta").attr("disabled", "true");
-                //$("#btEnvioFormModi").attr("disabled", "true");
+                $("#btEnvioFormModi").attr("disabled", "true");
 
                 $("#th_articulos_id").click(function(){
                     $("#orden").val("id");                    
@@ -285,7 +382,10 @@
                     $("#tbDatos").empty();
                 }
 
-                $()
+                $("#buttonCerrarModis").click(function(){
+                    
+                    $("#ventanaModalForumularioModi").attr("class","ventanaModalApagado");
+                });
 
                 document.getElementById("4").onclick = function(){
                     $("#divModal").attr("class","ventanaModalPrendido");    
@@ -305,9 +405,9 @@
                             objOption.innerHTML = value.marca;
 
                             document.getElementById("articulos_marca_alta").appendChild(objOption);
-                        });
-                    }
-                });
+                            });
+                        }
+                    });
 
                 }
 
@@ -319,31 +419,44 @@
                     $("#ventanaModalRespuesta").attr("class", "ventanaModalApagado");
                 });
 
-                $("#btEnvioFormAlta").click(function(){
-                    if(confirm("¿Desea dar el alta el articulo?")){
-                        //var data = new FormData($("#formArticulosAlta")[0]);
-                        var data = new FormData(document.getElementById("formArticulosAlta"));
-                                                
-                        var objAjax = $.ajax({
-                            type:'post',
-                            //method:'post',
-                            //enctype:'multipart/form-data',
-                            url:"./alta.php",
-                            processData:false,
-                            contentType:false,
-                            cache:false,
-                            data:data,
-                            success: function(respuestaDelServer){
+                $("#3").click(function(){
+                    $("#f_articulos_id").val("");
+                    $("#f_articulos_codArt").val("");
+                    $("#f_articulos_descrip").val("");                                        
+                    $("#f_articulos_fechaIngreso").val("");
+                    $("#f_articulos_stock").val("");
+                    $("#f_articulos_precio").val("");
+                });
 
-                                $("#ventanaModalRespuesta").attr("class", "ventanaModalRespuestaPrendido");
-                                $("#pRespuesta").empty();
-                                $("#pRespuesta").html(respuestaDelServer);
-                                alert(respuestaDelServer);
-                                // $("#divModalRespuesta").empty();
-                                // $("#divModalRespuesta").append("<p>"+respuestaDelServer+"</p>");
-                                
-                            }
-                        });
+                $("#btEnvioFormAlta").click(function(){
+                    if(confirm("¿Desea dar el alta el articulo?")){                        
+                        var form = document.getElementById("formArticulosAlta");
+                        form.addEventListener('submit', callbackFunction);
+
+                        function callbackFunction(event) {
+                            event.preventDefault();
+                            data = new FormData(event.target);    
+                            var objAjax = $.ajax({
+                                type:'post',
+                                method:'post',
+                                enctype:'multipart/form-data',
+                                url:"./alta.php",
+                                processData:false,
+                                contentType:false,
+                                cache:false,
+                                data:data,
+                                success: function(respuestaDelServer){
+
+                                    $("#ventanaModalRespuesta").attr("class", "ventanaModalRespuestaPrendido");                                    
+                                    $("#pRespuesta").empty();
+                                    $("#pRespuesta").html(respuestaDelServer);
+                                    form.reset();
+                                    
+                                }
+                            });                        
+                        }
+                                                
+                        
                     }
                     
                 });
@@ -367,6 +480,34 @@
                 document.getElementById("precioAlta").onkeyup = function(){
                     todoListoParaAlta();
                 }
+
+                //Form Modi OnKeyUps
+                document.getElementById("codArtModi").onkeyup = function(){
+                    todoListoParaModi();
+                }
+                document.getElementById("descripModi").onkeyup = function(){
+                    todoListoParaModi();
+                }
+                document.getElementById("fechaIngresoModi").onkeyup = function(){
+                    todoListoParaModi();
+                }
+                document.getElementById("stockModi").onkeyup = function(){
+                    todoListoParaModi();
+                }
+                document.getElementById("articulos_marca_modi").onkeyup = function(){
+                    todoListoParaModi();
+                }
+                document.getElementById("precioModi").onkeyup = function(){
+                    todoListoParaModi();
+                }
+
+                $("#btEnvioFormModi").click(function(){
+                    if(confirm("¿Desea realizar la modificacion?")){                        
+                            modi();
+                        }
+                });
+
+                
 
             });
 
@@ -455,21 +596,37 @@
                             objButton = document.createElement("button");
                             objButton.innerHTML = "PDFS";
                             objTd.appendChild(objButton);
+                            objTd.onclick = function(){
+                                llenarDocumento(value.codArt);
+                            };
                             objTr.appendChild(objTd);
+
 
                             var objTd = document.createElement("td");
                             objTd.setAttribute("campo-dato", "Modis");
                             objButton = document.createElement("button");
                             objButton.innerHTML = "Modi";
                             objTd.appendChild(objButton);
+                            objTd.onclick = function(){
+                                $("#ventanaModalForumularioModi").attr("class","ventanaModalPrendido");
+                                llenarMarcasModi();
+                                llenarDatosArticulo(value.codArt);
+                            };
                             objTr.appendChild(objTd);
+                            
 
                             var objTd = document.createElement("td");
                             objTd.setAttribute("campo-dato", "Bajas");
                             objButton = document.createElement("button");
                             objButton.innerHTML = "Borrar";
                             objTd.appendChild(objButton);
+                            objTd.onclick = function(){
+                                if(confirm("¿Dar de baja el articulo seleccionado: "+ value.codArt +"?")){
+                                    bajaArticulo(value.codArt);
+                                }                                
+                            };
                             objTr.appendChild(objTd);
+                            
 
                             document.getElementById("tbDatos").appendChild(objTr);
                         });
@@ -477,7 +634,125 @@
                     }
                 });
             }
+
+            function llenarDocumento(codArt)
+            {
+                var objAjax = $.ajax({
+                    type:"post",
+                    url:"./jsonDocumentoHelper.php",
+                    data:{
+                        codArt:codArt
+                    },
+                    success: function(respuestaDelServer){
+                            
+                            alert(respuestaDelServer);
+                            objJson = JSON.parse(respuestaDelServer);                            
+                            $("#ventanaModalRespuesta").attr("class", "ventanaModalRespuestaPrendido");
+                            $("#divModalRespuesta").empty();
+                            $("#divModalRespuesta").html("<iframe width='100%' height='600px' src='data:application/pdf;base64,"+objJson.documentoPdf+"'></iframe>");   
+                            
+                    }
+                });
+            }
+
+            function llenarMarcasModi(){
+                var objAjax = $.ajax({
+                    type:"post",
+                    url:"../php15DBListaOrdenadaFiltra/jsonMarcasHelper.php",
+                    data:{
+
+                    },
+                    success: function(respuestaDelServer){                            
+                            $("#articulos_marca_modi").empty();                            
+                            objJson = JSON.parse(respuestaDelServer);
+                            objJson.marcas.forEach(function(value) {
+
+                                var objOption = document.createElement("option");                            
+                                objOption.innerHTML = value.marca;
+
+                                document.getElementById("articulos_marca_modi").appendChild(objOption);
+                            });
+                    }
+                });
+            }
+
+            function llenarDatosArticulo(codArt){
+
+                var objAjax = $.ajax({
+                    type:"post",
+                    url:"./jsonArticuloHelper.php",
+                    data:{
+                        codArt:codArt
+                    },
+                    success: function(respuestaDelServer){
+                            
+                            objJson = JSON.parse(respuestaDelServer);                            
+                            objJson.articulos.forEach(function(value) {
+
+                                $("#codArtModi").val(value.codArt);
+                                $("#descripModi").val(value.descrip);
+                                $("#fechaIngresoModi").val(value.fechaIngreso);
+                                $("#stockModi").val(value.stock);
+                                $("#precioModi").val(value.precio); 
+                                
+                            });
+                    }
+                });
+            }
         
+            function modi(){
+
+                var form = document.getElementById("formArticulosModi");
+                form.addEventListener('submit', callbackFunction);
+                
+                function callbackFunction(event){
+                    event.preventDefault();
+                    data = new FormData(event.target);
+                    var objAjax = $.ajax({
+                        type:'post',
+                        method:'post',
+                        enctype:'multipart/form-data',
+                        url:"./modi.php",
+                        processData:false,
+                        contentType:false,
+                        cache:false,
+                        data:data,
+                        success: function(respuestaDelServer){
+                            $("#formArticulosModi").reset();
+                            $("#ventanaModalRespuesta").attr("class", "ventanaModalRespuestaPrendido");
+                            $("#pRespuesta").empty();
+                            $("#pRespuesta").html(respuestaDelServer);                            
+                        }
+                    });
+                }
+                                
+            }
+
+            function bajaArticulo(codArt){                
+                var objAjax = $.ajax({
+                    type:'post',                    
+                    url:"./baja.php",                    
+                    data:{
+                        codArt:codArt
+                    },
+                    success: function(respuestaDelServer){
+
+                        $("#ventanaModalRespuesta").attr("class", "ventanaModalRespuestaPrendido");
+                        $("#pRespuesta").empty();
+                        $("#pRespuesta").html(respuestaDelServer);                            
+                    }
+                });    
+            }
+
+            function todoListoParaModi(){
+                if(document.getElementById("formArticulosModi").checkValidity()){
+                    $("#btEnvioFormModi").attr("disabled", false);
+                }  
+                else{
+                    $("#btEnvioFormModi").attr("disabled", true);
+                }
+            }
+
             function todoListoParaAlta(){
                 if(document.getElementById("formArticulosAlta").checkValidity()){
                     $("#btEnvioFormAlta").attr("disabled", false);
@@ -523,7 +798,7 @@
                 </div>
             </header>
       
-            <form class="modal" id="formArticulosAlta"  >
+            <form class="modal" id="formArticulosAlta" enctype="multipart/form-data" >
                 <div class="divMainIzq">
                     
                     <label class="modal"> Codigo </label>
@@ -536,6 +811,9 @@
                     <select class="modal" id="articulos_marca_alta" name="marca">
     
                     </select>
+
+                    <label class="modal"> Archivo Pdf </label>
+                    <input class="modal" id="pdfAlta" name="documentoPdf" type="file">
                 </div>
     
                 <div class="divMainDer">
@@ -567,6 +845,64 @@
 
         </div>
 
+        <div id="ventanaModalForumularioModi" class="ventanaModalApagado">
+
+            <header>
+                <div class="divHeaderModal">
+                    <h1> Formulario MODIFICACION - Autopartes </h1>
+
+                    <button id="buttonCerrarModis" class="btnCerrar"> Cerrar </button>
+
+                </div>
+            </header>
+      
+            <form class="modal" id="formArticulosModi" enctype="multipart/form-data">
+                <div class="divMainIzq">
+                    
+                    <label class="modal"> Codigo </label>
+                    <input class="modal" id="codArtModi" name="codArt" type="text" required>
+    
+                    <label class="modal"> Descripcion </label>
+                    <input class="modal" id="descripModi" name="descrip" type="text" required>
+
+                    <label class="modal"> Marca </label>
+                    <select class="modal" id="articulos_marca_modi" name="marca">
+    
+                    </select>
+
+                    <label class="modal"> Archivo Pdf </label>
+                    <input class="modal" id="pdfAlta" name="documentoPdf" type="file">
+                </div>
+    
+                <div class="divMainDer">
+    
+                    <label class="modal"> Fecha Ingreso </label>
+                    <input class="modal" id="fechaIngresoModi" type="date" name="fechaIngreso" required>
+
+                    <label class="modal"> Stock </label>
+                    <input class="modal" id="stockModi" name="stock" type="number" min="1" required>
+
+                    <label class="modal"> Precio </label>
+                    <input class="modal" id="precioModi" name="precio" type="number" min="1" required>
+    
+                    <button id="btEnvioFormModi" > Enviar Modificacion </button>
+    
+                </div>
+
+                
+
+            </form>      
+            
+            
+                 
+            <footer class="divFooterModal">
+                <div>
+                    <h2> Pie del formulario </h2>
+                </div>            
+            </footer>
+
+        </div>
+
         <div id="ventanaModalRespuesta" class="ventanaModalApagado">
             <header>
                 <div class="divHeaderModal">
@@ -579,6 +915,7 @@
             <div id="divModalRespuesta">
                 <p id="pRespuesta"></p>
             </div>
+
         </div>
             
         
