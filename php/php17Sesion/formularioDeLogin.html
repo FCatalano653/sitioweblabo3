@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Ejercicios Php </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <style type="text/css">
+            .divMain{
+                margin: auto;
+                height: 100vh;
+                width: 100vw;                
+                background-image: linear-gradient(to right, rgb(143, 199, 227), rgb(46, 150, 201));
+            }
+
+            .divLogin{
+                height: 45vh;
+                text-align: center;
+                width:30vw;
+                position: fixed;
+                top: 23%;
+                left: 30%;
+                background-image: linear-gradient(rgb(65, 61, 61), rgb(0, 0, 0));
+            }
+
+            h1{
+                color:white;
+                
+            }
+            label{
+                padding-left: 10%;
+                padding-top: 5%;
+                color:white;
+                display: block;
+                text-align: left;
+                font-size: 1.2em;
+            }
+            input{
+                display: block;
+                margin-left: 10%;
+                margin-top: 5%;
+                
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        
+        <div class="divMain">
+            <div class="divLogin">
+                <h1> Inicio de Sesion </h1>
+
+                <form id="formLogin" method="post" action="./ingresoAlSistema.php">
+                    <label> Usuario </label>
+                    <input id="userInput" name="user" type="text" >
+
+                    <label> Contraseña </label>
+                    <input id="userPass" name="pass" type="password" >
+                </form>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

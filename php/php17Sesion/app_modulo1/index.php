@@ -1,3 +1,9 @@
+<?php
+
+    include('./manejoSesion.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -392,7 +398,7 @@
                     
                     var objAjax = $.ajax({
                     type:"post",
-                    url:"../php15DBListaOrdenadaFiltra/jsonMarcasHelper.php",
+                    url:"./jsonMarcasHelper.php",
                     data:{
 
                     },
@@ -514,7 +520,7 @@
             function cargaMarcas(){
                 var objAjax = $.ajax({
                     type:"post",
-                    url:"../php15DBListaOrdenadaFiltra/jsonMarcasHelper.php",
+                    url:"./jsonMarcasHelper.php",
                     data:{
 
                     },
@@ -536,7 +542,7 @@
                 $("#tbDatos").html("<p> Esperando respuesta.. </p>");
                 var objAjax = $.ajax({
                     type:"post",
-                    url:"../php15DBListaOrdenadaFiltra/jsonArticulosHelper.php",
+                    url:"./jsonArticulosHelper.php",
                     data:{
                         orden:$("#orden").val(),
                         f_articulos_id:$("#f_articulos_id").val(),
@@ -658,7 +664,7 @@
             function llenarMarcasModi(){
                 var objAjax = $.ajax({
                     type:"post",
-                    url:"../php15DBListaOrdenadaFiltra/jsonMarcasHelper.php",
+                    url:"./jsonMarcasHelper.php",
                     data:{
 
                     },
@@ -718,7 +724,7 @@
                         cache:false,
                         data:data,
                         success: function(respuestaDelServer){
-                            // $("#formArticulosModi").reset();
+                            $("#formArticulosModi").reset();
                             $("#ventanaModalRespuesta").attr("class", "ventanaModalRespuestaPrendido");
                             $("#pRespuesta").empty();
                             $("#pRespuesta").html(respuestaDelServer);                            
