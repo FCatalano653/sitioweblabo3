@@ -1,6 +1,10 @@
 <?php
 
-    include('./manejoSesion.php');
+    session_start();        
+    if(!isset($_SESSION['idDeSesion'])){
+        header('Location:../formularioDeLogin.html');
+        exit();
+    }
 
 ?>
 
@@ -381,6 +385,10 @@
                 //JQuery
                 $("#1").click(function(){                    
                     cargaTabla();
+                });
+
+                $("#btnTerminarSesion").click(function(){
+                    location.href="../destruirSesion.php";
                 });
 
                 //JavaScrip
@@ -778,6 +786,8 @@
                 <h1> Tabla Autopartes </h1>
 
                 <input name="orden" id="orden" type="text" value="id" readonly>
+
+                <button id="btnTerminarSesion" name="buttonTerminarSesion"> Cerrar Sesion </button>
 
                 <button id="1" name="btnCargar"> Cargar datos </button>
 

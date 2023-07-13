@@ -1,35 +1,41 @@
 <?php
 
-include ("./datosConexionBase.php");
+    session_start();        
+    if(!isset($_SESSION['idDeSesion'])){
+        header('Location:../formularioDeLogin.html');
+        exit();
+    }
 
-$sql = "select * from marcas order by id";
+    include ("./datosConexionBase.php");
 
-$stmt = $dbh->prepare($sql);
+    $sql = "select * from marcas order by id";
 
-$stmt->setFetchMode(PDO::FETCH_ASSOC);
-$stmt->execute();
+    $stmt = $dbh->prepare($sql);
 
-$marcas = [];
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $stmt->execute();
 
-While($fila = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $objMarca = new stdClass();
-    $objMarca->id=$fila['id'];
-    $objMarca->marca=$fila['marca'];
-    
-    array_push($marcas, $objMarca);
-}
+    $marcas = [];
 
-$objMarcas = new stdClass();
-$objMarcas->marcas=$marcas;
-$objMarcas->cantReg=count($marcas);
+    While($fila = $stmt->fetch(PDO::FETCH_ASSOC)){
+        $objMarca = new stdClass();
+        $objMarca->id=$fila['id'];
+        $objMarca->marca=$fila['marca'];
+        
+        array_push($marcas, $objMarca);
+    }
 
-
-$salidaJson = json_encode($objMarcas);
-$dbh = null;
-
-sleep(2);
+    $objMarcas = new stdClass();
+    $objMarcas->marcas=$marcas;
+    $objMarcas->cantReg=count($marcas);
 
 
-echo $salidaJson;
+    $salidaJson = json_encode($objMarcas);
+    $dbh = null;
+
+    sleep(2);
+
+
+    echo $salidaJson;
 
 ?>

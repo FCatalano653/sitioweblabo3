@@ -1,5 +1,11 @@
 <?php
 
+    session_start();        
+    if(!isset($_SESSION['idDeSesion'])){
+        header('Location:../formularioDeLogin.html');
+        exit();
+    }
+
     include ("./datosConexionBase.php");
 
     $orden = $_POST['orden'];

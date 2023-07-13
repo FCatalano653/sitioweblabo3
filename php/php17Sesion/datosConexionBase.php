@@ -1,4 +1,7 @@
 <?php
+
+   
+
     $dbname = 'fc653labo3fr_proyectolabo3';
     $dbhost = 'localhost';
     $dbuser = 'fc653labo3fr_1';

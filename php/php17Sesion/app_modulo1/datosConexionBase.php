@@ -1,4 +1,11 @@
 <?php
+
+    session_start();        
+    if(!isset($_SESSION['idDeSesion'])){
+        header('Location:../formularioDeLogin.html');
+        exit();
+    }
+
     $dbname = 'fc653labo3fr_proyectolabo3';
     $dbhost = 'localhost';
     $dbuser = 'fc653labo3fr_1';
